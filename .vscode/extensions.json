@@ -1,8 +1,12 @@
 {
   "recommendations": [
-    "mikoz.black-py",
+    "ms-python.python",
+    "ms-python.vscode-python-envs",
     "mcbeet.vscode-beet",
-    "amandin.dpc-pack"
+    "amandin.dpc-pack",
+    "thenuclearnexus.mecha-language-server",
+    "ledyba.launch-buttons",
+    "ms-python.vscode-pylance"
   ],
   "unwantedRecommendations": ["SPGoding.datapack-language-server"]
 }
