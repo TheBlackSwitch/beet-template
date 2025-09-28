@@ -31,15 +31,15 @@
 #---------------
 
 append function_tag minecraft:tick {
-    "values": {
+    "values": [
         "template:tick"
-    }
+    ]
 }
 
 append function_tag minecraft:load {
-    "values": {
+    "values": [
         "template:load"
-    }
+    ]
 }
 
 
