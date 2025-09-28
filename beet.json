@@ -1,20 +1,29 @@
 {
-  "name": "Beet Template",
-  "version": "1.2.0",
-  "description": "A pre-configured template to quickly set up your Minecraft Beet project.",
-  "author": "FoxedDev",
-  "output": "build",
-  "require": ["bolt", "beet.contrib.inline_function_tag"],
-  "data_pack": {
-    "load": ["src"]
-  },
-  "resource_pack": {
-    "load": ["src"]
-  },
-  "pipeline": [
-    "build.main",
-    "plugins.pack_install",
-    "plugins.advancement_icon",
-    "mecha"
-  ]
+    "data_pack": {
+        "load": ["src"],
+        "pack_format": 81,
+        "name": "Winter Rescue Datapack"
+    },
+    "resource_pack": {
+        "load": ["src"],
+        "pack_format": 64,
+        "name": "Winter Rescue Resourcepack"
+    },
+    "pipeline": [
+        "plugins.main",
+        "mecha"
+    ],
+    "id": "wr",
+    "name": "winter_rescue",
+    "description": {"text":"Complete tasks while avoiding betrayal by the traitor","color":"#8db7ff"},
+    "require": [
+        "bolt",
+        "bolt_expressions"
+    ],
+    "output": "build",
+    "meta": {
+        "bolt": {
+            "entrypoint": ["wr:main"]
+        }
+    }
 }

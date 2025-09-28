@@ -1,15 +1,10 @@
-### Beet ###
-
-# Beet cache
+# the cache folder for beet, used during the generation but does not conatain any useful info
 .beet_cache/
-
-# Beet output
-build/
-
-### Python ###
-
-# Cache
+# my python virtual environment, don't include this as it is system specific
+winter_rescue.venv/
+# Python cache during run, doesn't coantain useful info
 __pycache__/
-
-# Environments
-.venv
+# configs for the repo, system specific
+.vscode/
+# paint dot net edit files which we don't need
+*.pdn
