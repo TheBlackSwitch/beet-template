@@ -2,20 +2,20 @@
     "data_pack": {
         "load": ["src"],
         "pack_format": 81,
-        "name": "Winter Rescue Datapack"
+        "name": "Template Datapack"
     },
     "resource_pack": {
         "load": ["src"],
         "pack_format": 64,
-        "name": "Winter Rescue Resourcepack"
+        "name": "Template Resourcepack"
     },
     "pipeline": [
         "plugins.main",
         "mecha"
     ],
-    "id": "wr",
-    "name": "winter_rescue",
-    "description": {"text":"Complete tasks while avoiding betrayal by the traitor","color":"#8db7ff"},
+    "id": "tp",
+    "name": "template",
+    "description": "",
     "require": [
         "bolt",
         "bolt_expressions"
@@ -23,7 +23,7 @@
     "output": "build",
     "meta": {
         "bolt": {
-            "entrypoint": ["wr:main"]
+            "entrypoint": ["tp:main"]
         }
     }
 }
