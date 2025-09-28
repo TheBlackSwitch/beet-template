@@ -2,8 +2,7 @@
   "recommendations": [
     "ms-python.python",
     "ms-python.vscode-python-envs",
-    "mcbeet.vscode-beet",
-    "amandin.dpc-pack",
+    "superant.mc-dp-icons",
     "thenuclearnexus.mecha-language-server",
     "ledyba.launch-buttons",
     "ms-python.vscode-pylance"
