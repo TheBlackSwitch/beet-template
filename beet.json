@@ -1,11 +1,11 @@
 {
     "data_pack": {
-        "load": ["src"],
+        "load": ["src/datapack"],
         "pack_format": 81,
         "name": "Template Datapack"
     },
     "resource_pack": {
-        "load": ["src"],
+        "load": ["src/resourcepack"],
         "pack_format": 64,
         "name": "Template Resourcepack"
     },
