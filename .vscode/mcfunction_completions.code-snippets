@@ -565,4 +565,24 @@
         "body": "@r",
         "scope": "mcfunction,json"
     },
+
+    // Positional indicators
+    "~ ~ ~": {
+        "prefix": "~ ~ ~",
+        "body": "~ ~ ~",
+        "scope": "mcfunction,json"
+    },
+    "^ ^ ^": {
+        "prefix": "^ ^ ^",
+        "body": "^ ^ ^",
+        "scope": "mcfunction,json"
+    },
+
+    // The current file name as a resourcepath (useful for function recursion)
+    "THIS": {
+        "prefix": ">> THIS",
+        "body": "${RELATIVE_FILEPATH/(?:(?:.+\\\\)??data\\\\(.*?)\\\\(?:worldgen\\\\)?(?:tags\\\\)?(?:.*?)\\\\)|(?:(.*?)\\\\)|(?:(.*?)\\..*)/${1}${1:+:}${2}${2:+/}${3}/gm}",
+        "description": "the current file name",
+        "scope": "mcfunction,json"
+    }
 }
