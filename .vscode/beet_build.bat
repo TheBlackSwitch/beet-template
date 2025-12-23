@@ -8,5 +8,5 @@ if not exist .venv (
     call .venv\Scripts\activate.bat
 )
 
-beet build
+beet --log debug
 python done_sound.py

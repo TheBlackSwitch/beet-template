@@ -15,7 +15,9 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-        // Some nice to have snippets
+
+    
+    // Some nice to have snippets
     "Return And Run": {
         "prefix": [">> return run"],
         "body": "run return run",
@@ -31,18 +33,13 @@
         "description": "An if else statement",
         "scope": "mcfunction,json"
     },
-    "THIS": {
-        "prefix": [">> THIS", ">> function THIS"],
-        "body": "function ${RELATIVE_FILEPATH/(?:(?:.+\\\\)??data\\\\(.*?)\\\\(?:worldgen\\\\)?(?:tags\\\\)?(?:.*?)\\\\)|(?:(.*?)\\\\)|(?:(.*?)\\..*)/${1}${1:+:}${2}${2:+/}${3}/gm}",
-        "description": "the current file name",
-        "scope": "mcfunction,json"
-    },
     "comment_heading": {
-        "prefix": "comment heading",
+        "prefix": ">> comment heading",
         "body": [
             "#-------------------------------------------------------",
             "## ${1:<comment>}",
-            "#-------------------------------------------------------"
+            "#-------------------------------------------------------",
+            "${2}"
         ]
     },
     "bolt_file_template": {
@@ -100,6 +97,6 @@
     "Search ID Check": {
         "prefix": [">> Search ID Check",">> SIC"],
         "scope": "mcfunction,json",
-        "body": "${1|if predicate theblackswitch:matches_search_id,predicate=theblackswitch:matches_search_id,predicate=theblackswitch:matches_search_id,limit=1|}"
+        "body": "${1|if predicate theblackswitch:matches_search_id,predicate=theblackswitch:matches_search_id,predicate=theblackswitch:matches_search_id\\,limit=1|}"
     }
 }

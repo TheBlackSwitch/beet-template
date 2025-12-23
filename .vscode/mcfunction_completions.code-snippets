@@ -50,7 +50,7 @@
     "function": {
         "prefix": "function",
         "scope": "mcfunction,json",
-        "body": "function ${1}"
+        "body": "function ${1} ${2|with |}"
     },
     "data": {
         "prefix": "data",
@@ -85,7 +85,7 @@
     "effect": {
         "prefix": "effect",
         "scope": "mcfunction,json",
-        "body": "effect ${1|clear,give|} ${2:<targets>} ${3:<effect>} ${4|infinite|seconds|} ${5:<amplifier>} ${6|true,false|}"
+        "body": "effect ${1|clear,give|} ${2:<targets>} ${3:<effect>} ${4:<duration>} ${5:<amplifier>} ${6|true,false|}"
     },
     "enchant": {
         "prefix": "enchant",
@@ -130,7 +130,7 @@
     "execute on": {
         "prefix": "on",
         "scope": "mcfunction,json",
-        "body": "on ${1|attacker,controller,leasher,origin,owner,passengers,target,vehichle|}"
+        "body": "on ${1|attacker,controller,leasher,origin,owner,passengers,target,vehicle|}"
     },
     "execute positioned": {
         "prefix": "positioned",
@@ -165,7 +165,7 @@
     "execute if data": {
         "prefix": "if data",
         "scope": "mcfunction,json",
-        "body": "if data ${1|block,entity;storage|} ${2:<pos|target|source>} ${3:<path>}"
+        "body": "if data ${1|block,entity,storage|} ${2:<pos|target|source>} ${3:<path>}"
     },
     "execute if dimension": {
         "prefix": "if dimension",
@@ -201,6 +201,61 @@
         "prefix": "if score",
         "scope": "mcfunction,json",
         "body": "if score ${1:<target>} ${2:<objective>} ${3|matches,<,<=,=,=>,>|} ${4:<range|source>} ${5:<objective>}"
+    },
+    "execute unless dimension": {
+        "prefix": "unless dimension",
+        "scope": "mcfunction,json",
+        "body": "unless dimension ${1:<dimension>}"
+    },
+    "execute unless entity": {
+        "prefix": "unless entity",
+        "scope": "mcfunction,json",
+        "body": "unless entity ${1:<entities>}"
+    },
+    "execute unless function": {
+        "prefix": "unless function",
+        "scope": "mcfunction,json",
+        "body": "unless function ${1:<path>}"
+    },
+    "execute unless items": {
+        "prefix": "unless items",
+        "scope": "mcfunction,json",
+        "body": "unless items ${1|block,entity|} ${2:<source>} ${3|armor.,container.,contents,enderchest.,horse.,hotbar.,inventory.,player.crafting.,player.cursor,saddle,villager.,weapon.|}${4:<slot_number>} ${5:<item>}"
+    },
+    "execute unless loaded": {
+        "prefix": "unless loaded",
+        "scope": "mcfunction,json",
+        "body": "unless loaded ${1:<loaded>}"
+    },
+    "execute unless predicate": {
+        "prefix": "unless predicate",
+        "scope": "mcfunction,json",
+        "body": "unless predicate ${1:<predicate>}"
+    },
+    "execute unless score": {
+        "prefix": "unless score",
+        "scope": "mcfunction,json",
+        "body": "unless score ${1:<target>} ${2:<objective>} ${3|matches,<,<=,=,=>,>|} ${4:<range|source>} ${5:<objective>}"
+    },
+    "execute unless biome": {
+        "prefix": "unless biome",
+        "scope": "mcfunction,json",
+        "body": "unless biome ${1:<pos>} ${2:<biome>}"
+    },
+    "execute unless block": {
+        "prefix": "unless block",
+        "scope": "mcfunction,json",
+        "body": "unless block ${1:<pos>} ${2:<block>}"
+    },
+    "execute unless blocks": {
+        "prefix": "unless blocks",
+        "scope": "mcfunction,json",
+        "body": "unless blocks ${1:<start>} ${2:<end>} ${3:<destination>} ${4|all,masked|}"
+    },
+    "execute unless data": {
+        "prefix": "unless data",
+        "scope": "mcfunction,json",
+        "body": "unless data ${1|block,entity,storage|} ${2:<pos|target|source>} ${3:<path>}"
     },
     "execute store block": {
         "prefix": "store block",
@@ -315,7 +370,7 @@
     "ride": {
         "prefix": "ride",
         "scope": "mcfunction,json",
-        "body": "ride ${1:<target>} ${2|mount,dismount|} ${3:<vehichle>}"
+        "body": "ride ${1:<target>} ${2|mount,dismount|} ${3:<vehicle>}"
     },
     "rotate": {
         "prefix": "rotate",
@@ -583,6 +638,11 @@
         "prefix": ">> THIS",
         "body": "${RELATIVE_FILEPATH/(?:(?:.+\\\\)??data\\\\(.*?)\\\\(?:worldgen\\\\)?(?:tags\\\\)?(?:.*?)\\\\)|(?:(.*?)\\\\)|(?:(.*?)\\..*)/${1}${1:+:}${2}${2:+/}${3}/gm}",
         "description": "the current file name",
+        "scope": "mcfunction,json"
+    },
+    "minecraft namespace": {
+        "prefix": "minecraft",
+        "body": "minecraft",
         "scope": "mcfunction,json"
     }
 }
