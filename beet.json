@@ -1,21 +1,21 @@
 {
     "data_pack": {
         "load": ["src/datapack"],
-        "pack_format": 81,
         "name": "Template Datapack"
     },
     "resource_pack": {
         "load": ["src/resourcepack"],
-        "pack_format": 64,
         "name": "Template Resourcepack"
     },
     "pipeline": [
-        "plugins.main",
-        "mecha"
+        "plugins.custom.main",
+        "mecha",
+        "plugins.custom.finalyze"
     ],
     "id": "tp",
     "name": "template",
     "description": "",
+    "version": "1.0.0a",
     "require": [
         "bolt",
         "bolt_expressions"
