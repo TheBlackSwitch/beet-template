@@ -5,6 +5,7 @@ from beet import Context
 
 # Runs during the build
 def main(ctx: Context):
-    yield ## Stuff after yield runs after the build is almost finished
-    ## A sound when the build is (**mostly**) finished
-    
+    print("Hello world from pre-compile!")
+
+def finalyze(ctx: Context):
+    print("Hello world from post-compile!")
