@@ -8,22 +8,32 @@
         "name": "Template Resourcepack"
     },
     "pipeline": [
-        "plugins.custom.main",
-        "mecha",
-        "plugins.custom.finalyze"
+        "plugins.aliases",
+        "mecha"
     ],
     "id": "tp",
     "name": "template",
     "description": "",
     "version": "1.0.0a",
     "require": [
-        "bolt",
-        "bolt_expressions"
+        "bolt"
     ],
     "output": "build",
     "meta": {
         "bolt": {
             "entrypoint": ["tp:main"]
-        }
+        },
+        "aliases": [
+            {
+                "regex": "$version$",
+                "replace": "v2.0",
+                "comment": "The switch lib major version"
+            },
+            {
+                "regex": "$patch$",
+                "replace": "patch-0",
+                "comment": "The switch lib major version"
+            }
+        ]
     }
 }
