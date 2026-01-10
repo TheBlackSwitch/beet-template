@@ -25,12 +25,12 @@
         },
         "aliases": [
             {
-                "regex": "$version$",
+                "regex": "\\$version\\$",
                 "replace": "v2.0",
                 "comment": "The switch lib major version"
             },
             {
-                "regex": "$patch$",
+                "regex": "\\$patch\\$",
                 "replace": "patch-0",
                 "comment": "The switch lib major version"
             }
