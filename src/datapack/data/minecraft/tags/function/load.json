@@ -1,5 +1,12 @@
 {
     "values": [
-        {"id":"#theblackswitch:load","required":false}
+        {
+            "id":"#theblackswitch:load",
+            "required":false
+        },
+        {
+            "id": "tp:load",
+            "required": false
+        }
     ]
 }
