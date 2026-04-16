@@ -1,7 +1,7 @@
 {
     "data_pack": {
         "load": [
-            "libraries/SwitchLib-v2.0.2",
+            "libraries/SwitchLib-V2.0.2.zip",
             "src/datapack"
         ],
         "name": "Template Datapack"
@@ -34,8 +34,8 @@
             },
             {
                 "regex": "__patch__",
-                "replace": "patch-0",
-                "comment": "The switch lib major version"
+                "replace": "patch-2",
+                "comment": "The switch lib patch version"
             }
         ]
     }
